@@ -36,7 +36,6 @@ public class ProcessService {
     public void editProcess(Long processID, String title, String stageOrder) {
         Process processToEdit = new Process(processID, title, stageOrder);
         repository.save(processToEdit);
-
     }
 
     public Iterable<Process> findAllProcesses()  {
