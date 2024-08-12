@@ -46,7 +46,7 @@ public class ProcessController {
     }
 
     @GetMapping("/findAllProcesses")
-    @CrossOrigin
+    @CrossOrigin(origins = "https://process-manager-fe-4d25d7b8b5af.herokuapp.com", maxAge = 3600)
     public Iterable<Process> receiveFindAllProcesses() {
         return service.findAllProcesses();
     }
