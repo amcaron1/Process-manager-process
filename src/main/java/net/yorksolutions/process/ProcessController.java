@@ -16,6 +16,7 @@ import java.util.UUID;
 @RestController
 // @RequestMapping's use here allows for a "prefix" like "home" in the following url
 //    http://localhost:8080/home/findAllProcesses
+@CrossOrigin(origins = "*")
 @RequestMapping("/")
 public class ProcessController {
     private ProcessService service;
@@ -46,7 +47,7 @@ public class ProcessController {
     }
 
     @GetMapping("/findAllProcesses")
-    @CrossOrigin
+//    @CrossOrigin
     public Iterable<Process> receiveFindAllProcesses() {
         return service.findAllProcesses();
     }
